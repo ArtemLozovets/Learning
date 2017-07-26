@@ -1,5 +1,4 @@
-function addP(a, b){
-	return a+b;	
+function dedP(a, b){
+	return a-b;
 }
-
 
