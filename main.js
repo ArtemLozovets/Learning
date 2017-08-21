@@ -1,7 +1,8 @@
 ;(function() {
 	//typeLesson();
 	//numberLesson();	
-	numberWrapper();
+	//numberWrapper();
+	stringLesson();
 
 })();
 
@@ -67,5 +68,9 @@ function numberWrapper(){
 
 	console.log('10 == "10" =>', 10 == "10");
 	console.log('10 === "10" =>', 10 === "10");
+}
 
+//===========================================================
+function stringLesson(){
+	
 }
