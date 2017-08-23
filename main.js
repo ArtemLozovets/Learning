@@ -2,7 +2,8 @@
 	//typeLesson();
 	//numberLesson();	
 	//numberWrapper();
-	stringLesson();
+	//stringLesson();
+	booleanLesson();
 
 })();
 
@@ -72,5 +73,51 @@ function numberWrapper(){
 
 //===========================================================
 function stringLesson(){
-	
+	var _str= "My \"test\" string for my lesson";
+	console.log(_str, "=>", _str.length);
+	var _str2 = "My \
+new string \
+in lesson";
+	console.log(_str2);
+	var _str3 = "My\n\tnew\n\t\ttest\n\t\t\tstring";
+	console.log(_str3);
+	var _str4 = "Sometimes the same is different";
+	console.log(_str4," => ", _str4.charAt(_str4.length-1));
+	console.log("\"_str4.substring(10)\" => ",_str4.substring(10));
+	console.log("\"_str4.substring(10,16)\" => ",_str4.substring(10,16));
+	console.log("\"_str4.slice(-10)\" => ",_str4.slice(-10));
+	console.log("\"_str4.substr(10,10)\" => ",_str4.substr(10,10));
+	console.log("\"_str4.indexOf(\"i\")\" => ",_str4.indexOf('i'));
+	console.log("\"_str4.lastIndexOf(\"i\")\" => ",_str4.lastIndexOf('i'));
+	console.log('"_str4.replace("is", "is not")" => ',_str4.replace("is", "is not"));
+	console.log("\"_str4.split(' ')\" => ",_str4.split(' '));
+	console.log("\"_str4.toUpperCase()\" => ",_str4.toUpperCase());
+	console.log("\"_str4.toLowerCase()\" => ",_str4.toLowerCase());
+	console.log("\"_str4[4]\" => ",_str4[4]);
+
+}
+
+//===========================================================
+function booleanLesson(){
+	console.log('"5 === 6" => ', 5 === 6);	
+	console.log('"5 === 5" => ', 5 === 5);	
+	console.log('"Boolean(5)" => ', Boolean(5));
+	//Falsy values
+	console.log('"Boolean(undefined)" => ', Boolean(undefined));
+	console.log('"Boolean(null)" => ', Boolean(null));
+	console.log('"Boolean(0)" => ', Boolean(0));
+	console.log('"Boolean(NaN)" => ', Boolean(NaN));
+	console.log('"Boolean("")" => ', Boolean(""));
+
+	var a = 0,
+		isTrue = true;
+		//isTrue = false;
+	isTrue && (a = 5);
+	console.log(a);
+
+	//var someString = "Non-empty string";
+	var someString = "";
+	var otherString = someString || "Default String";
+	console.log(otherString);
+
 }
