@@ -3,7 +3,8 @@
 	//numberLesson();	
 	//numberWrapper();
 	//stringLesson();
-	booleanLesson();
+	//booleanLesson();
+	typeConvertLesson()
 
 })();
 
@@ -119,5 +120,24 @@ function booleanLesson(){
 	var someString = "";
 	var otherString = someString || "Default String";
 	console.log(otherString);
+}
 
+//===========================================================
+function typeConvertLesson(){
+	console.log('\"5 + "5"\" => ', (5 + "5"), typeof(5 + "5"));
+	console.log('\"5 * "4"\" => ', (5 * "4"), typeof(5 * "4"));
+	console.log('\"5 * "hi"\" => ', (5 * "hi"), typeof(5 * "hi"));
+	console.log('"Number("555")" => ', (Number("555")), typeof(Number("555")));
+	console.log('"String(4444)" => ', (String(4444)), typeof(String(4444)));
+	console.log('"!!5" => ', (!!5), typeof(!!5));
+	console.log('"!!0" => ', (!!0), typeof(!!0));
+	console.log('"555 + """ => ', (555 + ""), typeof(555 + ""));
+	console.log('"+"555"" => ', (+ "555"), typeof(+ "555"));
+	console.log('"+"555"" => ', (+ "555"), typeof(+ "555"));
+
+	var myNum = 666;
+	console.log('myNum.toString(16) =>', myNum.toString(16), typeof(myNum.toString(16)));
+	console.log('parseInt("45px", 10)', parseInt("45px", 10), typeof(parseInt("45px", 10)));
+	console.log('parseInt("45px", 16)', parseInt("45px", 16), typeof(parseInt("45px", 16)));
+	console.log('parseFloat("100 em", 16)', parseInt("100 em", 16), typeof(parseInt("100 em", 16)));
 }
