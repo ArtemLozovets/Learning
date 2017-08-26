@@ -145,5 +145,31 @@ function typeConvertLesson(){
 
 //===========================================================
 function conditionalInstructionsLesson(){
-	alert('NURI');
+	var name = 'Serhii';
+	var homecity;
+	if(name === 'Yulia'){
+		homecity = "Lubny";
+	}else if(name === 'Serhii'){
+		homecity = "Bagachka";
+	}else if(name === 'Olga'){
+		homecity = 'Lviv';
+	}
+
+	console.log(homecity);
+
+	var name2 = 'Olga';
+	switch(name2){
+		case 'Yulia': homecity = "Lubny"; break;
+		case 'Serhii': homecity = "Bagachka"; break;
+		case 'Olga': homecity = "Lviv"; break;
+		default: homecity = "Kyiv";
+	}
+
+	console.log(homecity);
+
+	var x = 10;
+	var text = x > 10 ? "x > 10" : x < 10 ? "x < 10" : "x = 10";
+	console.log('x = '+ x +' |', text);
+
+	
 }
