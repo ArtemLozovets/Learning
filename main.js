@@ -140,4 +140,5 @@ function typeConvertLesson(){
 	console.log('parseInt("45px", 10)', parseInt("45px", 10), typeof(parseInt("45px", 10)));
 	console.log('parseInt("45px", 16)', parseInt("45px", 16), typeof(parseInt("45px", 16)));
 	console.log('parseFloat("100 em", 16)', parseInt("100 em", 16), typeof(parseInt("100 em", 16)));
+	
 }
