@@ -5,7 +5,12 @@
 	//stringLesson();
 	//booleanLesson();
 	//typeConvertLesson();
-	conditionalInstructionsLesson();
+	//conditionalInstructionsLesson();
+	//loopLesson();
+    //functionLesson();
+    //closureLesson();
+    //exceptionLesson();
+    objectsLesson();
 
 })();
 
@@ -172,3 +177,109 @@ function conditionalInstructionsLesson(){
 	var text = x > 10 ? "x > 10" : x < 10 ? "x < 10" : "x = 10";
 	console.log('x = '+ x +' |', text);
 }
+
+//===========================================================
+function loopLesson(){
+
+	// for (инициализация; тест; инкремент) тело цикла
+	console.clear();
+	for(i=0;i<12;i++){
+     	console.log(i);
+	};
+
+	console.clear();
+	for(i=10;i--;){
+		console.log(i);
+	}
+
+	//while(выражение) инструкция
+	console.log('WHILE LOOP');
+	var a = 10;
+	while(a--){
+		console.log(a);
+	}
+
+	console.log('DO WHILE LOOP');
+	var b = 4
+	do console.log(b); while(b--);
+}
+
+//===========================================================
+function functionLesson(){
+
+	var greet = function(name){
+		console.log(arguments);
+		return "Hello " + name;
+	};
+
+	console.log(greet("Serge", 12).toUpperCase());
+
+	var greeting = (function(name){
+		return 'Hello ' + name;
+	})("Sorax");
+
+	console.log(greeting);
+}
+
+
+//===========================================================
+function closureLesson(){
+	console.log('Closure Lesson');
+	var func = function(){
+		var i = 10;
+		return function(){
+			return i;
+		}
+	};
+
+	var anotherFunc = function(){
+		var i = 20;
+		console.log(func()());
+	};
+
+	anotherFunc();
+
+console.log('----------COUNTER------------');
+
+	var counter = (function(){
+		var count = 0;
+		return function(num){
+			count = num !== undefined ? num : count;
+			return count++;
+		};
+	}());
+
+	console.log(counter());
+	console.log(counter());
+	console.log(counter());
+	console.log(counter(500));
+	console.log(counter());
+	console.log(counter());
+	console.log(counter());
+}
+
+//===========================================================
+function exceptionLesson(){
+	console.log('---Exception Lesson---');
+	var calculate = function(n){
+		if(n > 10) throw new Error("n should be less than 10");
+		return n + 10;
+	};
+
+	try{
+		calculate(20);
+	} catch(e){
+		console.log('Error text: ' + e.message);
+	} finally{
+		console.log('Finally');
+	}
+}
+
+//===========================================================
+function objectsLesson(){
+	console.log('---Objects Lesson---');
+}
+
+
+
+
